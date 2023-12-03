@@ -1,0 +1,204 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    height: 14vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+  
+  .logo {
+    font-size: 1.6em;
+    transition: 0.5s;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-right: 9rem;
+    margin-top: 0;
+  }
+  
+  ul li {
+    padding-right: 1.7rem;
+  }
+  
+  nav a:hover{
+    color: white;
+  }
+  
+  nav a {
+    color: rgb(211, 211, 211);
+    font-weight: thin;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+  }
+  
+  .hamburger {
+    padding-right: 2.9rem;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 32px;
+    height: 3px;
+    margin: 4px;
+    background-color: antiquewhite;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 769px) {
+    .hamburger {
+      display: block;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  
+    nav {
+      position: fixed;
+    }
+  
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.92);
+      top: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      opacity: 0.9;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  
+  @-webkit-keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .fade-in {
+    animation: navLinkFade 0.5s ease forwards;
+  }
+  
+  .nav-links li {
+    animation-delay: calc(var(--index) / 7 * 1s + 0.5s);
+  }
+  
+  .reverse-animation {
+    animation-direction: reverse !important; 
+  }
+  
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+
+  /* Splash */
+
+  .splash{
+    background-color: rgba(0, 0, 0, 0.301);
+    height: 100svh;
+    background-image: url(/images/tre-ek-splash.webp);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  }
+  .splash h1{
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .splash h2{
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 769px) {
+    .splash h1{
+      font-size: 3rem;
+    }
+    .splash h2{
+      font-size: 1.5rem;
+    }
+  }
+
+  /* About */
+
+  .about{
+    height: 100svh;
+    background-color: rgb(37, 34, 34);
+    z-index: 10;
+    color: white;
+  }
+  
