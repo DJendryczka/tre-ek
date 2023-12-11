@@ -84,8 +84,8 @@ function hideAllSlides() {
 window.onload=autoSlide()
 
 // Add background-colot to navbar when scrolling
-window.onscroll = function() {myFunction()};
-function myFunction() {
+window.onscroll = function() {navOnScroll()};
+function navOnScroll() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("nav").style.backgroundColor = "rgba(12, 9, 8, 0.654)";
   } else {
