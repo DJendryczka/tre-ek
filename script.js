@@ -82,3 +82,13 @@ function hideAllSlides() {
 //   slides[slidePosition].classList.add('carousel-item-visible');
 // }
 window.onload=autoSlide()
+
+// Add background-colot to navbar when scrolling
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("nav").style.backgroundColor = "rgba(12, 9, 8, 0.654)";
+  } else {
+    document.getElementById("nav").style.backgroundColor = "transparent";
+  }
+}
