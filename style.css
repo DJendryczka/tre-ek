@@ -328,6 +328,7 @@ h2 {
 .container{
   max-width: 1400px;
   height: 100vh;
+  margin: 0 0.5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -338,6 +339,7 @@ h2 {
 
 .container-smal{
   max-width: 1400px;
+  padding: 0 0.2px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -379,6 +381,13 @@ h2 {
   padding: 1.6rem;
   margin: 0;
   letter-spacing: .10rem;
+}
+.icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 996px){
